@@ -46,12 +46,13 @@ def refresh(config: RefreshConfig, object_key: str) -> None:
                     targets=[config.domain],
                 )
             # URL 刷新
-            refresh_api(
-                zone_id=config.zone_id,
-                refresh_type=config.refresh_type,
-                refresh_method=config.refresh_method,
-                targets=[f"http://{config.domain}/{object_key}", f"https://{config.domain}/{object_key}"],
-            )
+            else:
+                refresh_api(
+                    zone_id=config.zone_id,
+                    refresh_type=config.refresh_type,
+                    refresh_method=config.refresh_method,
+                    targets=[f"http://{config.domain}/{object_key}", f"https://{config.domain}/{object_key}"],
+                )
         case _:
             print(f"Refresh Type Not Found: {config.refresh_type}")
 
