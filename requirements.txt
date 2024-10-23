@@ -1,0 +1,2 @@
+# teo_refresh_cos
+tencentcloud-sdk-python-teo==3.0.1256
