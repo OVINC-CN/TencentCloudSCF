@@ -39,7 +39,7 @@ class VPC:
                 response = self.client.DescribeAddressTemplates(request)
                 print(
                     "Load Address Template Partial Success: "
-                    f"{offset + len(response.AddressTemplateSet)}/{response.TotalCount}"
+                    f"{len(templates) + len(response.AddressTemplateSet)}/{response.TotalCount}"
                 )
             except TencentCloudSDKException as err:
                 print(f"Load Address Template Failed => {err}")
