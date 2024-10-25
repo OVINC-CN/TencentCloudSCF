@@ -25,6 +25,7 @@ def main(*args, **kwargs) -> None:
     new_template_map = defaultdict(list)
     new_template_ids = []
     # IP 分组
+    index = 0
     for index, ip in enumerate(ips):
         tmpl_index = index // Config.tmpl_max_ips
         new_template_map[tmpl_index].append(ip)
