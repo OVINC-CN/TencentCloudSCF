@@ -28,7 +28,7 @@ def main(*args, **kwargs) -> None:
     for index, ip in enumerate(ips):
         tmpl_index = index // Config.tmpl_max_ips
         new_template_map[tmpl_index].append(ip)
-    print("All IPs into %d groups", len(new_template_map.keys()))
+    print(f"{index + 1} IPs into {len(new_template_map.keys())} groups")
     # 创建新的模板列表
     for index, ips in new_template_map.items():
         new_template_ids.append(vpc.create_address_template(date=timestamp, index=index, ips=ips))
