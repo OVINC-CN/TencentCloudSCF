@@ -1,0 +1,2 @@
+tencentcloud-sdk-python-vpc==3.0.1256
+httpx==0.27.2
